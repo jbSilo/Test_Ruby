@@ -1,0 +1,25 @@
+<h1>Gardner List</h1>
+
+<%= link_to 'New gardner', new_gardner_path %>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Phone #</th>
+        <th>Plot #</th>
+        <th colspan="2"></th>
+    </tr>
+    
+    <% @gardners.each do |gardner| %>
+        <tr>
+            <td><%= gardner.name %></td>
+            <td><%= gardner.number %></td>
+            <td><%= gardner.plot_num %></td>
+            <td><%= link_to 'Show', gardner_path(gardner) %></td>
+            <td><%= link_to 'Edit', edit_gardner_path(gardner) %></td>
+            <td><%= link_to 'Delete', gardner_path(gardner),
+                    method: :delete,
+                    data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+    <% end %>
+</table>

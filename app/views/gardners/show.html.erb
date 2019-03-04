@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @gardner.name %>
+</p>
+ 
+<p>
+  <strong>Number:</strong>
+  <%= @gardner.number %>
+</p>
+
+<p>
+    <strong>Plot number:</strong>
+    <%= @gardner.plot_num %>
+</p>
+
+<%= link_to 'Edit', edit_gardner_path(@gardner) %> |
+<%= link_to 'Back', gardners_path %>
